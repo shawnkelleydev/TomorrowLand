@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--css-->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- start content -->
+      <header>
+        <center><h1>tomorrow land</h1></center>
+      </header>
+      <!--------------------------------------------->
+      <center>
+        <p id="verse">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+          laudantium amet nisi quia iste necessitatibus! Sit adipisci vero
+          suscipit minus quisquam nobis iure expedita beatae necessitatibus
+          ratione! Esse, mollitia porro.
+        </p>
+        <p id="citation">lorem 5:60-63</p>
+      </center>
+
+      <ul class="income" id="income-list"></ul>
+      <!--------------------------------------------->
+      <ul class="income">
+        <li class="title">income</li>
+        <!--------------------------------------------->
+        <li>
+          <span class="err"
+            ><p class="err-msg">Please check your input.</p></span
+          >
+          <form action="index.html" class="grid" id="income-input">
+            <input type="text" class="col-1 br" />
+            <input type="number" class="col-2" />
+            <button type="submit" class="submit col-3">+</button>
+          </form>
+        </li>
+        <!--------------------------------------------->
+      </ul>
+      <!--------------------------------------------->
+      <ul id="balance">
+        <li class="grid"><span>Balance</span><span></span><span></span></li>
+      </ul>
+      <!--------------------------------------------->
+      <ul class="outgo">
+        <li class="title">outgo</li>
+        <!--------------------------------------------->
+        <li>
+          <span class="err"
+            ><p class="err-msg">Please check your input.</p></span
+          >
+          <form action="index.html" class="grid" id="outgo-input">
+            <input type="text" class="col-1 br" />
+            <input type="number" class="col-2" />
+            <button type="submit" class="submit col-3">+</button>
+          </form>
+        </li>
+        <!--------------------------------------------->
+
+        <!--------------------------------------------->
+      </ul>
+      <ul class="outgo" id="outgo-list"></ul>
+      <!--------------------------------------------->
+
+      <!--end wrapper-->
+    </div>
+    <footer>
+      <center>footer</center>
+    </footer>
+    <!-- js -->
+    <script src="js/declarations.js"></script>
+    <script src="js/balance.js"></script>
+    <script src="js/delete.js"></script>
+    <script src="js/tags.js"></script>
+    <script src="js/write.js"></script>
+    <script src="js/verses.js"></script>
+    <script src="js/forms.js"></script>
+    <script src="js/sort.js"></script>
+    <script src="js/tithe.js"></script>
+    <script src="js/localStorage.js"></script>
+
+    <!-- end body -->
+  </body>
+</html>
