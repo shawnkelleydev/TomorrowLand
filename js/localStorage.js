@@ -5,7 +5,7 @@ function writeLoadLI() {
     const li = localStorage.getItem(key);
     if (key[0] === "i") {
       incomeUL.insertAdjacentHTML("beforeend", li);
-    } else {
+    } else if (key[0] === "o") {
       outgoUL.insertAdjacentHTML("beforeend", li);
     }
     deleteListener(key);
