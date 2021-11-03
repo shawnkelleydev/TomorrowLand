@@ -22,6 +22,7 @@ function edit(target, form) {
     show(form);
     //set value
     inpField.value = target.innerText;
+    getBalance();
   });
   // form submit listener
   form.addEventListener("submit", (e) => {
@@ -38,6 +39,7 @@ function edit(target, form) {
     ) {
       rewriteOutgo(inpField.value);
     }
+    getBalance();
   });
   blur(form, inpField, target);
 }
@@ -97,5 +99,6 @@ function blur(form, inpField, target) {
     } else {
       resetLocalStorage();
     }
+    getBalance();
   });
 }
