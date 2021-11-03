@@ -112,6 +112,11 @@ li span {
   height: 50px;
 }
 
+li,
+input {
+  text-transform: capitalize;
+}
+
 /* ------------------------------------------------------------------------
 
     TAGS 
@@ -123,10 +128,6 @@ ul {
   padding: 0;
   border-radius: 20px;
   margin: 0;
-}
-
-li {
-  text-transform: capitalize;
 }
 
 input {
@@ -141,6 +142,7 @@ footer {
 
 button {
   color: white;
+  cursor: pointer;
 }
 
 li[data="give"] {
@@ -206,12 +208,12 @@ li[data="other"] {
   display: none;
   position: absolute;
   width: auto;
-  left: 20px;
   z-index: -1;
 }
 
 .err-msg {
   position: relative;
+  left: 20px;
   font-size: 0.8em;
   color: var(--err);
 }
@@ -237,6 +239,10 @@ li[data="other"] {
 #income-input input,
 #outgo-input input {
   background: var(--highlight1);
+}
+
+#wrapper {
+  max-width: 500px;
 }
 
 /* ------------------------------------------------------------------------

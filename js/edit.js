@@ -25,7 +25,7 @@ function edit(target, form) {
     inpField.value = target.innerText;
     getBalance();
   });
-  // form submit listener
+  // form submit handler
   form.addEventListener("submit", (e) => {
     //stop page refresh
     e.preventDefault();
@@ -42,6 +42,8 @@ function edit(target, form) {
     }
     getBalance();
   });
+
+  //blur handler
   blur(form, inpField, target);
 }
 
