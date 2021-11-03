@@ -20,6 +20,7 @@ function edit(target, form) {
     //hide/show available in declarations.js
     hide(target);
     show(form);
+    inpField.focus();
     //set value
     inpField.value = target.innerText;
     getBalance();
