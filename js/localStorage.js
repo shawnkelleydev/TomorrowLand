@@ -36,3 +36,19 @@ function makeObjects(key, html) {
 
   return ob;
 }
+
+function resetLocalStorage() {
+  localStorage.clear();
+  const ichil = incomeUL.children;
+  const ochil = outgoUL.children;
+  writeLocal(ichil);
+  writeLocal(ochil);
+}
+
+//writes items to local storage
+function writeLocal(list) {
+  for (let i = 0; i < list.length; i++) {
+    const key = list[i].getAttribute("id");
+    localStorage.setItem(key, list[i].outerHTML);
+  }
+}

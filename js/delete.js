@@ -20,3 +20,7 @@ function deleteFromArray(key) {
 function clearStorage(key) {
   localStorage.removeItem(key);
 }
+
+function setStorage(key, item) {
+  localStorage.setItem(key, item);
+}

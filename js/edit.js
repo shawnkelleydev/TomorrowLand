@@ -23,7 +23,7 @@ function edit(target, form) {
     //set value
     inpField.value = target.innerText;
   });
-  //form submit listener
+  // form submit listener
   form.addEventListener("submit", (e) => {
     //stop page refresh
     e.preventDefault();
@@ -47,7 +47,6 @@ function edit(target, form) {
 //make objects from outgo li, pass via iteration to sortOutgo(ob), set in conditional in form submit listener
 
 //parent resorter
-//makes objects from outgoUL children and calls sortOutgo() to resort each item in the list
 function rewriteOutgo() {
   //clear outgoArr
   outgoArr.splice(0);
@@ -95,6 +94,8 @@ function blur(form, inpField, target) {
       inpField.getAttribute("type") === "text"
     ) {
       rewriteOutgo(inpField.value);
+    } else {
+      resetLocalStorage();
     }
   });
 }
