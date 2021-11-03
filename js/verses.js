@@ -19,6 +19,10 @@ const nasb = [
     text: "So do not worry about tomorrow; for tomorrow will worry about itself. Each day has enough trouble of its own.",
     citation: "Jesus (Matthew 6:34 NASB)",
   },
+  {
+    text: "Do not store up for yourselves treasures on earth, where moth and rust destroy, and where thieves break in and steal. But store up for yourselves treasures in heaven, where neither moth nor rust destroys, and where thieves do not break in or steal; for where your treasure is, there your heart will be also.",
+    citation: "Jesus (Matthew 6:19)",
+  },
 ];
 
 function postVerse(bible) {
