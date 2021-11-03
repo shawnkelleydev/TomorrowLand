@@ -11,7 +11,8 @@ function writeLoadLI() {
     deleteListener(key);
     if (key.includes("out")) {
       const ob = makeObjects(key, li);
-      sortOutgo(ob);
+      outgoArr.push(ob);
+      sortOutgo();
     }
   }
   getBalance();

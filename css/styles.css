@@ -12,13 +12,22 @@
 
 :root {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  /* build */
   --highlight1: yellow;
   --highlight2: rgb(0, 255, 0);
+  /* modular */
   --body: rgb(0, 0, 44);
-  --even: rgb(137, 0, 137);
-  --odd: rgb(166, 0, 171);
   --delete: rgb(188, 0, 132);
   --submit: blue;
+  --err: red;
+  /* li cats */
+  --give: blue;
+  --debt: rgb(225, 255, 0);
+  --util: rgb(56, 253, 161);
+  --wall: rgb(0, 255, 255);
+  --sub: rgb(253, 102, 102);
+  --other: rgb(253, 102, 195);
+  /* footer - for sticky footer */
   --footerHeight: 80px;
 }
 
@@ -30,6 +39,22 @@ body {
 #wrapper {
   width: 95%;
   min-height: calc(100vh - var(--footerHeight));
+}
+
+body {
+  font-size: 100%;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 1.875em;
+}
+
+p {
+  font-size: 0.875em;
 }
 
 /* ------------------------------------------------------------------------
@@ -68,7 +93,8 @@ button,
 
 .text,
 .amt,
-input {
+input,
+center {
   padding: 10px;
 }
 
@@ -84,8 +110,6 @@ li,
 li span {
   height: 50px;
 }
-
-/* -- rads -- */
 
 /* ------------------------------------------------------------------------
 
@@ -111,7 +135,6 @@ input {
 footer {
   height: var(--footerHeight);
   flex-direction: column-reverse;
-  padding: 10px;
 }
 
 button {
@@ -119,27 +142,27 @@ button {
 }
 
 li[data="give"] {
-  border-left: 5px solid blue;
+  border-left: 5px solid var(--give);
 }
 
 li[data="debt"] {
-  border-left: 5px solid rgb(225, 255, 0);
+  border-left: 5px solid var(--debt);
 }
 
 li[data="utility"] {
-  border-left: 5px solid rgb(56, 253, 161);
+  border-left: 5px solid var(--util);
 }
 
 li[data="wall"] {
-  border-left: 5px solid rgb(0, 255, 255);
+  border-left: 5px solid var(--wall);
 }
 
 li[data="sub"] {
-  border-left: 5px solid rgb(253, 102, 102);
+  border-left: 5px solid var(--sub);
 }
 
 li[data="other"] {
-  border-left: 5px solid rgb(253, 102, 195);
+  border-left: 5px solid var(--other);
 }
 
 /* ------------------------------------------------------------------------
@@ -188,7 +211,7 @@ li[data="other"] {
 .err-msg {
   position: relative;
   font-size: 0.8em;
-  color: red;
+  color: var(--err);
 }
 
 .title {
@@ -204,6 +227,10 @@ li[data="other"] {
     IDs 
 
 ------------------------------------------------------------------------ */
+
+#balance li {
+  border: 1px solid white;
+}
 
 /* ------------------------------------------------------------------------
 

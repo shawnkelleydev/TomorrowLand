@@ -1,5 +1,4 @@
-function sortOutgo(ob) {
-  outgoArr.push(ob);
+function sortOutgo() {
   outgoUL.innerHTML = ``;
   for (let i = 0; i < outgoArr.length; i++) {
     if (outgoArr[i].tag.includes("giv")) {
@@ -35,6 +34,7 @@ function sortOutgo(ob) {
 
 function write(key, html) {
   outgoUL.insertAdjacentHTML("beforeend", html);
-  localStorage.setItem(key, html);
-  deleteListener(key);
+  localStorage.setItem(key, html); //add to local storage
+  deleteListener(key); //see delete.js
+  handleEdit(key); //see edit.js
 }

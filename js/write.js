@@ -26,12 +26,14 @@ function writeLI(text, amt, key, location) {
     location.insertAdjacentHTML("beforeend", html);
     localStorage.setItem(key, html);
     deleteListener(key);
+    handleEdit(key);
   } else {
     const ob = {
       key,
       tag,
       html,
     };
-    sortOutgo(ob);
+    outgoArr.push(ob);
+    sortOutgo(); //organizes outgoArr / writes to page
   }
 }
