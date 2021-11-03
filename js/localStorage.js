@@ -2,14 +2,13 @@ function writeLoadLI() {
   let keys = Object.keys(localStorage);
   for (let i = 0; i < keys.length; i++) {
     const key = keys[i];
-    console.log(key);
     const li = localStorage.getItem(key);
     if (key[0] === "i") {
       incomeUL.insertAdjacentHTML("beforeend", li);
+      handleEdit(key);
     } else if (key[0] === "o") {
       outgoUL.insertAdjacentHTML("beforeend", li);
     }
-
     deleteListener(key);
     if (key.includes("out")) {
       const ob = makeObjects(key, li);

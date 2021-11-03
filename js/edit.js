@@ -39,6 +39,7 @@ function edit(target, form) {
       rewriteOutgo(inpField.value);
     }
   });
+  blur(form, inpField, target);
 }
 
 // -------------------------------------
@@ -76,4 +77,24 @@ function makeObject(html) {
     tag,
   };
   return ob;
+}
+
+// -------------------------------------
+//blur event
+
+function blur(form, inpField, target) {
+  inpField.addEventListener("blur", (e) => {
+    e.preventDefault();
+    hide(form);
+    show(target);
+    //set value
+    target.innerText = inpField.value;
+    const parentListId = target.parentElement.parentElement.getAttribute("id");
+    if (
+      parentListId.includes("out") &&
+      inpField.getAttribute("type") === "text"
+    ) {
+      rewriteOutgo(inpField.value);
+    }
+  });
 }
