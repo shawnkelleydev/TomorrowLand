@@ -15,6 +15,16 @@ function getBalance() {
     outgo += n;
   }
   const bal = income - outgo;
-  const balanceSpan = balance.querySelectorAll("span")[1];
-  balanceSpan.innerText = bal;
+  const inSpan = balance.querySelectorAll("span")[0];
+  const outSpan = balance.querySelectorAll("span")[1];
+  const balSpan = balance.querySelectorAll("span")[2];
+  inSpan.innerHTML = `Income: ${income}`;
+  outSpan.innerHTML = `Outgo: ${outgo}`;
+  balSpan.innerHTML = `Balance: ${bal}`;
+
+  if (bal < 0) {
+    balSpan.style.color = "red";
+  } else {
+    balSpan.style.color = "";
+  }
 }

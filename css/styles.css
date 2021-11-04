@@ -181,6 +181,12 @@ li[data="other"] {
   grid-template-columns: auto 100px 60px;
 }
 
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
 .col-1 {
   grid-column: 1/2;
 }
@@ -233,8 +239,27 @@ li[data="other"] {
 
 ------------------------------------------------------------------------ */
 
+#balance {
+  margin: 20px 0;
+}
+
 #balance li {
-  border: 1px solid white;
+  padding: 20px;
+  height: auto;
+  border: 1px white solid;
+  border-radius: 20px;
+}
+
+#balance span {
+  margin: 10px;
+}
+
+#balance span:first-child {
+  color: var(--highlight2);
+}
+
+#balance span:nth-child(2) {
+  color: var(--util);
 }
 
 #income-input input,
