@@ -151,6 +151,7 @@ input {
 footer {
   height: var(--footerHeight);
   flex-direction: column-reverse;
+  margin-top: 50px;
 }
 
 button {
