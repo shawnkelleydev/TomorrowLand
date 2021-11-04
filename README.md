@@ -6,7 +6,9 @@ It doesn't connect to your bank or keep up with your transactions.
 
 It DOES give you a focussed space to effortlessly assemble your monthly budget.
 
-When you add spending items, Tomorrow Land self-categorizes them, shows a dynamic balance, and keeps the input fields close together. No scrolling required.
+When you add spending items, Tomorrow Land sorts them, shows a dynamic balance, and keeps the input fields close together. No scrolling required.
+
+Messed something up? Tomorrow Land lets you make edits, and it will resort your spending items and update the balance based on the update.
 
 It also gives you a randomly-selected, money-relevant verse from the Bible to help you keep things in perspective.
 
