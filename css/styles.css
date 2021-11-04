@@ -29,7 +29,7 @@
   --other: rgb(7, 0, 209);
   --income: rgb(0, 255, 76);
   /* footer - for sticky footer */
-  --footerHeight: 80px;
+  --footerHeight: auto;
 }
 
 body {
@@ -39,7 +39,7 @@ body {
 
 #wrapper {
   width: 95%;
-  min-height: calc(100vh - var(--footerHeight));
+  min-height: 100vh;
 }
 
 body {
@@ -118,6 +118,11 @@ input {
   text-transform: capitalize;
 }
 
+#wrapper,
+center {
+  max-width: 500px;
+}
+
 /* ------------------------------------------------------------------------
 
     TAGS 
@@ -129,6 +134,13 @@ ul {
   padding: 0;
   border-radius: 20px;
   margin: 0;
+}
+
+a,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: var(--wall);
 }
 
 input {
@@ -265,10 +277,6 @@ li[data="other"] {
 #income-input input,
 #outgo-input input {
   background: var(--highlight1);
-}
-
-#wrapper {
-  max-width: 500px;
 }
 
 /* ------------------------------------------------------------------------
