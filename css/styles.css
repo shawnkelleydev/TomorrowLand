@@ -13,12 +13,12 @@
 :root {
   font-family: "Quicksand", sans-serif;
   /* build */
-  --highlight1: rgb(0, 38, 176);
-  --highlight2: rgb(0, 255, 0);
+  --highlight1: rgb(255, 255, 255);
+  --highlight2: rgb(255, 0, 179);
   /* modular */
   --body: rgb(0, 0, 44);
   --delete: rgb(188, 0, 132);
-  --submit: blue;
+  --submit: var(--highlight1);
   --err: red;
   /* li cats */
   --give: rgb(161, 0, 158);
@@ -49,6 +49,7 @@ body {
 h1 {
   font-size: 2.5em;
   text-transform: capitalize;
+  color: var(--highlight2);
 }
 
 h2 {
@@ -88,7 +89,6 @@ button,
 }
 
 .income,
-#balance,
 .outgo {
   font-size: 1.2em;
 }
@@ -129,6 +129,13 @@ center {
 
 ------------------------------------------------------------------------ */
 
+#citation {
+  /* border-bottom: 1px white solid; */
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  color: var(--highlight2);
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -140,7 +147,7 @@ a,
 a:active,
 a:visited {
   text-decoration: none;
-  color: var(--wall);
+  color: var(--highlight2);
 }
 
 input {
@@ -152,6 +159,7 @@ footer {
   height: var(--footerHeight);
   flex-direction: column-reverse;
   margin-top: 50px;
+  font-size: 0.7em;
 }
 
 button {
@@ -181,6 +189,22 @@ li[data="sub"] {
 
 li[data="other"] {
   border-left: 5px solid var(--other);
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--highlight1);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--highlight1);
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: var(--highlight1);
 }
 
 /* ------------------------------------------------------------------------
@@ -218,6 +242,8 @@ li[data="other"] {
 
 .submit {
   background: var(--submit);
+  color: var(--body);
+  font-size: 1.7em;
 }
 
 .br {
@@ -254,13 +280,12 @@ li[data="other"] {
 
 #balance {
   margin: 20px 0;
+  background-color: rgb(44, 44, 44);
 }
 
 #balance li {
   padding: 20px;
   height: auto;
-  border: 1px white solid;
-  border-radius: 20px;
 }
 
 #balance span {
@@ -268,7 +293,7 @@ li[data="other"] {
 }
 
 #balance span:first-child {
-  color: var(--highlight2);
+  color: var(--income);
 }
 
 #balance span:nth-child(2) {
@@ -277,7 +302,9 @@ li[data="other"] {
 
 #income-input input,
 #outgo-input input {
-  background: var(--highlight1);
+  background: --body;
+  border: 1px solid var(--highlight1);
+  border-left: 5px solid var(--highlight1);
 }
 
 /* ------------------------------------------------------------------------
