@@ -10,4 +10,4 @@ When you add spending items, Tomorrow Land keeps the input fields close together
 
 Messed something up? Tomorrow Land lets you make edits, and it will resort and update automatically.
 
-Thanks for using Tomorrow Land, where we shape tomorrow today.
+Tomorrow Land.  Shape tomorrow today.
